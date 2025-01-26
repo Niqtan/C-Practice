@@ -127,3 +127,6 @@ var1.ptr = &var2;
 var.ptr-> i, var1.ptr->c
 
 //This is possible because the ptr refers to the structure itself 
+
+//Lookup tables
+
