@@ -37,13 +37,13 @@ main (int argc, char *argv[]) {
 
     //The . notation would access each variable name and iterate over them
     for (i = 0; xtab[i].words != xtab[7].words; i++) {
-        //This would flop because it would only be storing the 6 words
-        //Now we need to concatenate the next words after the 6 words
-        *(fixed_arr + i) = xtab[i].words;
-    }
-    for (i = 7; xtab[7].words != '\0'; i++) {
         for (i = 0; i <= 3 ;i++) {
             for(j = i + 1; j <= 3; j++) {
+                //0 means the next letter is identical hence we compare it to 0
+                //to sort different letters
+                
+                //If the j iterable has a greater alphabeticn caracter than
+                //the name, then those two names are interchanged
                 if (strcmp(xtab[i].words, xtab[j].words) > 0) {
                     strcpy(*(fixed_arr + i), xtab[i].words);
                     strcpy(xtab[i].words, xtab[j].words);
@@ -51,6 +51,9 @@ main (int argc, char *argv[]) {
                 }
             }
         }
+    }
+    for (i = 7; xtab[7].words != '\0'; i++) {
+        *(fixed_arr + i) = xtab[j].words;
     }
 
     printf("The alphabetic sorted array of the first 6 words is: %i\n", xtab.words);
