@@ -127,3 +127,9 @@ var1.ptr = &var2;
 var.ptr-> i, var1.ptr->c
 
 //This is possible because the ptr refers to the structure itself 
+<<<<<<< HEAD
+=======
+
+//Lookup tables
+
+>>>>>>> 006ab45c36b521a6f14015159f6c111afffbfebc
